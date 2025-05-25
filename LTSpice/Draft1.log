@@ -1,0 +1,54 @@
+Questionable use of curly braces in "xu1 0 n007 nc_01 nc_02 nc_03 nc_04 nc_05 nc_06 nc_07 nc_08 nc_09 nc_10 nc_11 nc_12 q4 0 cd4040b vdd=5 speed=1 tripdt=5n vdd1={vdd} speed1={speed} tripdt1={tripdt}"
+    Error: undefined symbol in: "[vdd]"
+Questionable use of curly braces in "xu1 0 n007 nc_01 nc_02 nc_03 nc_04 nc_05 nc_06 nc_07 nc_08 nc_09 nc_10 nc_11 nc_12 q4 0 cd4040b vdd=5 speed=1 tripdt=5n vdd1=(vdd) speed1={speed} tripdt1={tripdt}"
+    Error: undefined symbol in: "[speed]"
+Questionable use of curly braces in "xu1 0 n007 nc_01 nc_02 nc_03 nc_04 nc_05 nc_06 nc_07 nc_08 nc_09 nc_10 nc_11 nc_12 q4 0 cd4040b vdd=5 speed=1 tripdt=5n vdd1=(vdd) speed1=(speed) tripdt1={tripdt}"
+    Error: undefined symbol in: "[tripdt]"
+Questionable use of curly braces in "xu3 n003 q4 n008 en sq0 sq1 sq2 sq3 sq4 p001 nc_13 nc_14 q4 0 74hc164 vcc=5 speed=1 tripdt=5n vcc1={vcc} speed1={speed} tripdt1={tripdt}"
+    Error: undefined symbol in: "[vcc]"
+Questionable use of curly braces in "xu3 n003 q4 n008 en sq0 sq1 sq2 sq3 sq4 p001 nc_13 nc_14 q4 0 74hc164 vcc=5 speed=1 tripdt=5n vcc1=(vcc) speed1={speed} tripdt1={tripdt}"
+    Error: undefined symbol in: "[speed]"
+Questionable use of curly braces in "xu3 n003 q4 n008 en sq0 sq1 sq2 sq3 sq4 p001 nc_13 nc_14 q4 0 74hc164 vcc=5 speed=1 tripdt=5n vcc1=(vcc) speed1=(speed) tripdt1={tripdt}"
+    Error: undefined symbol in: "[tripdt]"
+LTspice 24.0.12 for Windows
+Circuit: * C:\Users\Parmeet Singh Ghai\Documents\GitHub\AutomatedLockSystem\LTSpice\Draft1.asc
+Start Time: Sun May 25 11:44:47 2025
+Warning: Multiple definitions of model "dio2" Type: Diode
+Warning: Multiple definitions of model "sw_hc2" Type: Switch
+Warning: Multiple definitions of model "sw_hc1" Type: Switch
+Warning: Multiple definitions of model "dio2" Type: Diode
+Warning: Multiple definitions of model "sw_hc2" Type: Switch
+Warning: Multiple definitions of model "sw_hc1" Type: Switch
+Warning: Multiple definitions of model "cd40dio1" Type: Diode
+solver = Normal
+Maximum thread count: 12
+tnom = 27
+temp = 27
+method = Gear
+gmin = 1e-09
+abstol = 1e-09
+reltol = 0.01
+chgtol = 1e-12
+c1: Increased Cpar to 1e-13
+c2: Increased Cpar to 1e-13
+WARNING: Less than two connections to node u1:mrn.  This node is used by a:u1:r.
+WARNING: Less than two connections to node nc_01.  This node is used by r:u1:out1:out.
+WARNING: Less than two connections to node nc_02.  This node is used by r:u1:out2:out.
+WARNING: Less than two connections to node nc_03.  This node is used by r:u1:out3:out.
+WARNING: Less than two connections to node nc_04.  This node is used by r:u1:out4:out.
+WARNING: Less than two connections to node nc_05.  This node is used by r:u1:out5:out.
+WARNING: Less than two connections to node nc_06.  This node is used by r:u1:out6:out.
+WARNING: Less than two connections to node nc_07.  This node is used by r:u1:out7:out.
+WARNING: Less than two connections to node nc_08.  This node is used by r:u1:out8:out.
+WARNING: Less than two connections to node nc_09.  This node is used by r:u1:out9:out.
+WARNING: Less than two connections to node nc_10.  This node is used by r:u1:out10:out.
+WARNING: Less than two connections to node nc_11.  This node is used by r:u1:out11:out.
+WARNING: Less than two connections to node nc_12.  This node is used by r:u1:out12:out.
+WARNING: Less than two connections to node sq0.  This node is used by r:u3:out1:out.
+WARNING: Less than two connections to node nc_13.  This node is used by r:u3:out7:out.
+WARNING: Less than two connections to node nc_14.  This node is used by r:u3:out8:out.
+Per .tran options, skipping operating point for transient analysis.
+Ignoring empty pin current: Ix(u1:vdd)
+Ignoring empty pin current: Ix(u3:vcc)
+Total elapsed time: 1.543 seconds.
+
