@@ -1,45 +1,47 @@
 * C:\Users\Parmeet Singh Ghai\Documents\GitHub\AutomatedLockSystem\LTSpice\Draft1.asc
-XU1 0 N007 NC_01 NC_02 NC_03 NC_04 NC_05 NC_06 NC_07 NC_08 NC_09 NC_10 NC_11 NC_12 Q4 0 CD4040B vdd=5 speed=1 tripdt=5n vdd1={vdd} speed1={speed} tripdt1={tripdt}
-V1 N007 0 5
-XU2 0 Q4 N001 LT1086-5
-C1 N001 0 0.1µ V=25 Irms=0 Rser=0.025 Lser=800p mfg="Würth Elektronik" pn="885012206071 WCAP-CSGP 0603" type="X7R"
-C3 N001 0 10µ V=25 Irms=0 Rser=0 Lser=0 mfg="Murata" pn="GRM21BR61E106KA73" type="X5R"
+XU1 0 N010 NC_01 NC_02 NC_03 NC_04 NC_05 NC_06 NC_07 NC_08 NC_09 NC_10 NC_11 NC_12 Q4 0 CD4040B vdd=5 speed=1 tripdt=5n vdd1={vdd} speed1={speed} tripdt1={tripdt}
+V1 N010 0 5
+XU2 0 Q4 N006 LT1086-5
+C1 N006 0 0.1µ V=25 Irms=0 Rser=0.025 Lser=800p mfg="Würth Elektronik" pn="885012206071 WCAP-CSGP 0603" type="X7R"
+C3 N006 0 10µ V=25 Irms=0 Rser=0 Lser=0 mfg="Murata" pn="GRM21BR61E106KA73" type="X5R"
 C2 Q4 0 0.1µ V=25 Irms=0 Rser=0.025 Lser=800p mfg="Würth Elektronik" pn="885012206071 WCAP-CSGP 0603" type="X7R"
 C4 Q4 0 10µ V=25 Irms=0 Rser=0 Lser=0 mfg="Murata" pn="GRM21BR61E106KA73" type="X5R"
-V2 N001 0 8.4 Rser=0.150
-M1 N004 N005 N006 N006 AO6407
-D1 N009 Q4 1N4148
-D2 N009 Q4 1N4148
-D3 N009 Q4 1N4148
-D4 N009 Q4 1N4148
-D5 Q4 N005 1N4148
-D6 0 N005 1N4148
-D7 0 N005 1N4148
-D8 0 N005 1N4148
-D9 0 N005 1N4148
-D10 0 N005 1N4148
-D11 0 N005 1N4148
-D12 0 N005 1N4148
-M2 N004 N009 N010 N010 AO6408
-R3 N010 0 10K tol=1 pwr=0.25
-R4 0 N005 100K tol=1 pwr=0.25
-R5 N009 Q4 4.7K tol=1 pwr=0.25
-R1 Q4 N006 1K tol=1 pwr=0.25
-R2 N006 0 4.7K tol=1 pwr=0.25
-XU3 N003 Q4 N008 EN sq0 sq1 sq2 sq3 sq4 P001 NC_13 NC_14 Q4 0 74HC164 vcc=5 speed=1 tripdt=5n vcc1={vcc} speed1={speed} tripdt1={tripdt}
-V3 N003 0 PULSE(0 5 0 1n 1n 0.1 0.2)
-R6 N008 Q4 4.7K
-A1 P002 0 0 0 0 N012 0 0 BUF Vhigh=5
-R7 0 N002 10K
-R8 N002 P001 4.7K
-D13 sq1 N011 1N4148
-D14 sq2 N011 1N4148
-D15 sq3 N011 1N4148
-D16 sq4 N011 1N4148
-R9 P002 N011 4.7K
-R10 EN N013 4.7K
-D17 N012 N013 1N4148
-D18 sq4 N013 1N4148
+V2 N006 0 8.4 Rser=0.150
+M1 N007 N008 N009 N009 AO6407
+D1 N014 Q4 1N4148
+D2 N014 Q4 1N4148
+D3 N014 Q4 1N4148
+D4 N014 Q4 1N4148
+D5 Q4 N008 1N4148
+D6 0 N008 1N4148
+D7 0 N008 1N4148
+D8 0 N008 1N4148
+D9 0 N008 1N4148
+D10 0 N008 1N4148
+D11 0 N008 1N4148
+D12 0 N008 1N4148
+M2 N007 N014 N015 N015 AO6408
+R3 N015 0 10K tol=1 pwr=0.25
+R4 0 N008 100K tol=1 pwr=0.25
+R5 N014 Q4 4.7K tol=1 pwr=0.25
+R1 Q4 N009 1K tol=1 pwr=0.25
+R2 N009 0 4.7K tol=1 pwr=0.25
+XU3 N002 Q4 N011 N013 sq0 sq1 sq2 sq3 sq4 NC_13 NC_14 NC_15 Q4 0 74HC164 vcc=5 speed=1 tripdt=5n vcc1={vcc} speed1={speed} tripdt1={tripdt}
+V3 N002 0 PULSE(0 5 0 1n 1n 0.1 0.2)
+R6 N011 Q4 4.7K
+D13 sq1 RESET 1N4148
+D14 sq2 RESET 1N4148
+D15 sq3 RESET 1N4148
+D16 sq4 RESET 1N4148
+XU4 RESET N003 N005 LOAD N001 N004 Q4 0 74HC393 vcc=5 speed=1 tripdt=5n vcc1={vcc} speed1={speed} tripdt1a={tripdt}
+R11 N003 N002 4.7K
+C6 Q4 0 0.1µ V=25 Irms=0 Rser=0.025 Lser=800p mfg="Würth Elektronik" pn="885012206071 WCAP-CSGP 0603" type="X7R"
+C7 Q4 0 10µ V=25 Irms=0 Rser=0 Lser=0 mfg="Murata" pn="GRM21BR61E106KA73" type="X5R"
+R13 RESET 0 10K
+D19 LOAD N012 1N4148
+C5 RESET 0 0.1µ V=25 Irms=0 Rser=0.025 Lser=800p mfg="Würth Elektronik" pn="885012206071 WCAP-CSGP 0603" type="X7R"
+R7 N013 N012 4.7K
+D17 sq4 N012 1N4148
 .model D D
 .lib C:\Users\Parmeet Singh Ghai\AppData\Local\LTspice\lib\cmp\standard.dio
 .model NMOS NMOS
@@ -50,6 +52,7 @@ D18 sq4 N013 1N4148
 .options gmin=1n cshunt=1p
 .options itl1=500 itl2=5000 itl4=100
 .include cd4000.lib
+.include 74hc.lib
 .lib 74hc.lib
 .lib CD4000.lib
 .lib LT1083.lib
