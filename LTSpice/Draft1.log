@@ -1,24 +1,36 @@
-Questionable use of curly braces in "xu1 0 n010 nc_01 nc_02 nc_03 nc_04 nc_05 nc_06 nc_07 nc_08 nc_09 nc_10 nc_11 nc_12 q4 0 cd4040b vdd=5 speed=1 tripdt=5n vdd1={vdd} speed1={speed} tripdt1={tripdt}"
+Questionable use of curly braces in "xu1 hour_clock n003 q1 q2 q3 q4 q5 q6 q7 q8 q9 q10 q11 q12 vcc 0 cd4040b vdd=5 speed=1 tripdt=5n vdd1={vdd} speed1={speed} tripdt1={tripdt}"
     Error: undefined symbol in: "[vdd]"
-Questionable use of curly braces in "xu1 0 n010 nc_01 nc_02 nc_03 nc_04 nc_05 nc_06 nc_07 nc_08 nc_09 nc_10 nc_11 nc_12 q4 0 cd4040b vdd=5 speed=1 tripdt=5n vdd1=(vdd) speed1={speed} tripdt1={tripdt}"
+Questionable use of curly braces in "xu1 hour_clock n003 q1 q2 q3 q4 q5 q6 q7 q8 q9 q10 q11 q12 vcc 0 cd4040b vdd=5 speed=1 tripdt=5n vdd1=(vdd) speed1={speed} tripdt1={tripdt}"
     Error: undefined symbol in: "[speed]"
-Questionable use of curly braces in "xu1 0 n010 nc_01 nc_02 nc_03 nc_04 nc_05 nc_06 nc_07 nc_08 nc_09 nc_10 nc_11 nc_12 q4 0 cd4040b vdd=5 speed=1 tripdt=5n vdd1=(vdd) speed1=(speed) tripdt1={tripdt}"
+Questionable use of curly braces in "xu1 hour_clock n003 q1 q2 q3 q4 q5 q6 q7 q8 q9 q10 q11 q12 vcc 0 cd4040b vdd=5 speed=1 tripdt=5n vdd1=(vdd) speed1=(speed) tripdt1={tripdt}"
     Error: undefined symbol in: "[tripdt]"
-Questionable use of curly braces in "xu3 n002 q4 n011 n013 sq0 sq1 sq2 sq3 sq4 nc_13 nc_14 nc_15 q4 0 74hc164 vcc=5 speed=1 tripdt=5n vcc1={vcc} speed1={speed} tripdt1={tripdt}"
+Questionable use of curly braces in "xu8 n017 n018 c0 c1 c2 c3 vcc 0 74hc393 vcc=5 speed=1 tripdt=5n vcc1={vcc} speed1={speed} tripdt1a={tripdt}"
     Error: undefined symbol in: "[vcc]"
-Questionable use of curly braces in "xu3 n002 q4 n011 n013 sq0 sq1 sq2 sq3 sq4 nc_13 nc_14 nc_15 q4 0 74hc164 vcc=5 speed=1 tripdt=5n vcc1=(vcc) speed1={speed} tripdt1={tripdt}"
+Questionable use of curly braces in "xu8 n017 n018 c0 c1 c2 c3 vcc 0 74hc393 vcc=5 speed=1 tripdt=5n vcc1=(vcc) speed1={speed} tripdt1a={tripdt}"
     Error: undefined symbol in: "[speed]"
-Questionable use of curly braces in "xu3 n002 q4 n011 n013 sq0 sq1 sq2 sq3 sq4 nc_13 nc_14 nc_15 q4 0 74hc164 vcc=5 speed=1 tripdt=5n vcc1=(vcc) speed1=(speed) tripdt1={tripdt}"
+Questionable use of curly braces in "xu8 n017 n018 c0 c1 c2 c3 vcc 0 74hc393 vcc=5 speed=1 tripdt=5n vcc1=(vcc) speed1=(speed) tripdt1a={tripdt}"
     Error: undefined symbol in: "[tripdt]"
-Questionable use of curly braces in "xu4 reset n003 n005 load n001 n004 q4 0 74hc393 vcc=5 speed=1 tripdt=5n vcc1={vcc} speed1={speed} tripdt1a={tripdt}"
+Questionable use of curly braces in "xu3 n004 p003 n007 n009 n012 n014 n015 n005 nc_01 nc_02 nc_03 nc_04 vcc 0 74hc164 vcc=5 speed=1 tripdt=5n vcc1={vcc} speed1={speed} tripdt1={tripdt}"
     Error: undefined symbol in: "[vcc]"
-Questionable use of curly braces in "xu4 reset n003 n005 load n001 n004 q4 0 74hc393 vcc=5 speed=1 tripdt=5n vcc1=(vcc) speed1={speed} tripdt1a={tripdt}"
+Questionable use of curly braces in "xu3 n004 p003 n007 n009 n012 n014 n015 n005 nc_01 nc_02 nc_03 nc_04 vcc 0 74hc164 vcc=5 speed=1 tripdt=5n vcc1=(vcc) speed1={speed} tripdt1={tripdt}"
     Error: undefined symbol in: "[speed]"
-Questionable use of curly braces in "xu4 reset n003 n005 load n001 n004 q4 0 74hc393 vcc=5 speed=1 tripdt=5n vcc1=(vcc) speed1=(speed) tripdt1a={tripdt}"
+Questionable use of curly braces in "xu3 n004 p003 n007 n009 n012 n014 n015 n005 nc_01 nc_02 nc_03 nc_04 vcc 0 74hc164 vcc=5 speed=1 tripdt=5n vcc1=(vcc) speed1=(speed) tripdt1={tripdt}"
+    Error: undefined symbol in: "[tripdt]"
+Questionable use of curly braces in "xu4 n006 n010 n013 load n008 n011 vcc 0 74hc393 vcc=5 speed=1 tripdt=5n vcc1={vcc} speed1={speed} tripdt1a={tripdt}"
+    Error: undefined symbol in: "[vcc]"
+Questionable use of curly braces in "xu4 n006 n010 n013 load n008 n011 vcc 0 74hc393 vcc=5 speed=1 tripdt=5n vcc1=(vcc) speed1={speed} tripdt1a={tripdt}"
+    Error: undefined symbol in: "[speed]"
+Questionable use of curly braces in "xu4 n006 n010 n013 load n008 n011 vcc 0 74hc393 vcc=5 speed=1 tripdt=5n vcc1=(vcc) speed1=(speed) tripdt1a={tripdt}"
+    Error: undefined symbol in: "[tripdt]"
+Questionable use of curly braces in "xu9 q1 q3 q4 q6 hour_clock vcc 0 74hc21 vcc=5 speed=1 tripdt=5n vcc1={vcc} speed1={speed} tripdt1={tripdt}"
+    Error: undefined symbol in: "[vcc]"
+Questionable use of curly braces in "xu9 q1 q3 q4 q6 hour_clock vcc 0 74hc21 vcc=5 speed=1 tripdt=5n vcc1=(vcc) speed1={speed} tripdt1={tripdt}"
+    Error: undefined symbol in: "[speed]"
+Questionable use of curly braces in "xu9 q1 q3 q4 q6 hour_clock vcc 0 74hc21 vcc=5 speed=1 tripdt=5n vcc1=(vcc) speed1=(speed) tripdt1={tripdt}"
     Error: undefined symbol in: "[tripdt]"
 LTspice 24.0.12 for Windows
 Circuit: * C:\Users\Parmeet Singh Ghai\Documents\GitHub\AutomatedLockSystem\LTSpice\Draft1.asc
-Start Time: Sun May 25 15:09:26 2025
+Start Time: Tue May 27 15:42:44 2025
 Warning: Multiple definitions of model "dio2" Type: Diode
 Warning: Multiple definitions of model "sw_hc2" Type: Switch
 Warning: Multiple definitions of model "sw_hc1" Type: Switch
@@ -32,6 +44,12 @@ Warning: Multiple definitions of model "dio2" Type: Diode
 Warning: Multiple definitions of model "sw_hc2" Type: Switch
 Warning: Multiple definitions of model "sw_hc1" Type: Switch
 Warning: Multiple definitions of model "cd40dio1" Type: Diode
+Warning: Multiple definitions of model "u7:pn" Type: BJT
+Warning: Multiple definitions of model "u7:np" Type: BJT
+Warning: Multiple definitions of model "u7:2scr375p" Type: BJT
+Warning: Multiple definitions of model "u7:bc857b" Type: BJT
+Warning: Multiple definitions of model "u7:bc847c" Type: BJT
+Warning: Multiple definitions of model "u7:bc847b" Type: BJT
 solver = Normal
 Maximum thread count: 12
 tnom = 27
@@ -43,31 +61,41 @@ reltol = 0.01
 chgtol = 1e-12
 c1: Increased Cpar to 1e-13
 c2: Increased Cpar to 1e-13
+c9: Increased Cpar to 1e-13
+c12: Increased Cpar to 1e-13
+c13: Increased Cpar to 1e-13
+c15: Increased Cpar to 1e-13
+c5: Increased Cpar to 1e-11
 c6: Increased Cpar to 1e-13
-c5: Increased Cpar to 1e-13
+c8: Increased Cpar to 1e-13
+c11: Increased Cpar to 1e-10
+c10: Increased Cpar to 1e-10
+c16: Increased Cpar to 1e-13
+WARNING: Node NC_19 is floating.
+WARNING: Node NC_21 is floating.
+
 WARNING: Less than two connections to node u1:mrn.  This node is used by a:u1:r.
-WARNING: Less than two connections to node nc_01.  This node is used by r:u1:out1:out.
-WARNING: Less than two connections to node nc_02.  This node is used by r:u1:out2:out.
-WARNING: Less than two connections to node nc_03.  This node is used by r:u1:out3:out.
-WARNING: Less than two connections to node nc_04.  This node is used by r:u1:out4:out.
-WARNING: Less than two connections to node nc_05.  This node is used by r:u1:out5:out.
-WARNING: Less than two connections to node nc_06.  This node is used by r:u1:out6:out.
-WARNING: Less than two connections to node nc_07.  This node is used by r:u1:out7:out.
-WARNING: Less than two connections to node nc_08.  This node is used by r:u1:out8:out.
-WARNING: Less than two connections to node nc_09.  This node is used by r:u1:out9:out.
-WARNING: Less than two connections to node nc_10.  This node is used by r:u1:out10:out.
-WARNING: Less than two connections to node nc_11.  This node is used by r:u1:out11:out.
-WARNING: Less than two connections to node nc_12.  This node is used by r:u1:out12:out.
-WARNING: Less than two connections to node sq0.  This node is used by r:u3:out1:out.
-WARNING: Less than two connections to node nc_13.  This node is used by r:u3:out6:out.
-WARNING: Less than two connections to node nc_14.  This node is used by r:u3:out7:out.
-WARNING: Less than two connections to node nc_15.  This node is used by r:u3:out8:out.
-WARNING: Less than two connections to node n005.  This node is used by r:u4:out1:out.
-WARNING: Less than two connections to node n001.  This node is used by r:u4:out3:out.
-WARNING: Less than two connections to node n004.  This node is used by r:u4:out4:out.
+WARNING: Less than two connections to node q7.  This node is used by r:u1:out7:out.
+WARNING: Less than two connections to node q8.  This node is used by r:u1:out8:out.
+WARNING: Less than two connections to node q9.  This node is used by r:u1:out9:out.
+WARNING: Less than two connections to node q10.  This node is used by r:u1:out10:out.
+WARNING: Less than two connections to node q11.  This node is used by r:u1:out11:out.
+WARNING: Less than two connections to node q12.  This node is used by r:u1:out12:out.
+WARNING: Less than two connections to node nc_01.  This node is used by r:u3:out5:out.
+WARNING: Less than two connections to node nc_02.  This node is used by r:u3:out6:out.
+WARNING: Less than two connections to node nc_03.  This node is used by r:u3:out7:out.
+WARNING: Less than two connections to node nc_04.  This node is used by r:u3:out8:out.
+WARNING: Less than two connections to node n013.  This node is used by r:u4:out1:out.
+WARNING: Less than two connections to node n008.  This node is used by r:u4:out3:out.
+WARNING: Less than two connections to node n011.  This node is used by r:u4:out4:out.
+WARNING: Less than two connections to node nc_19.  This node is used by s§r_photo1.
+WARNING: Less than two connections to node nc_20.  This node is used by s§f_photo1.
+WARNING: Less than two connections to node nc_21.  This node is used by s§f_photo1.
 Per .tran options, skipping operating point for transient analysis.
 Ignoring empty pin current: Ix(u1:vdd)
+Ignoring empty pin current: Ix(u8:vcc)
 Ignoring empty pin current: Ix(u3:vcc)
 Ignoring empty pin current: Ix(u4:vcc)
-Total elapsed time: 2.301 seconds.
+Ignoring empty pin current: Ix(u9:vcc)
+Total elapsed time: 43.684 seconds.
 

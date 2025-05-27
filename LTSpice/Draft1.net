@@ -1,60 +1,103 @@
 * C:\Users\Parmeet Singh Ghai\Documents\GitHub\AutomatedLockSystem\LTSpice\Draft1.asc
-XU1 0 N010 NC_01 NC_02 NC_03 NC_04 NC_05 NC_06 NC_07 NC_08 NC_09 NC_10 NC_11 NC_12 Q4 0 CD4040B vdd=5 speed=1 tripdt=5n vdd1={vdd} speed1={speed} tripdt1={tripdt}
-V1 N010 0 5
-XU2 0 Q4 N006 LT1086-5
-C1 N006 0 0.1µ V=25 Irms=0 Rser=0.025 Lser=800p mfg="Würth Elektronik" pn="885012206071 WCAP-CSGP 0603" type="X7R"
-C3 N006 0 10µ V=25 Irms=0 Rser=0 Lser=0 mfg="Murata" pn="GRM21BR61E106KA73" type="X5R"
-C2 Q4 0 0.1µ V=25 Irms=0 Rser=0.025 Lser=800p mfg="Würth Elektronik" pn="885012206071 WCAP-CSGP 0603" type="X7R"
-C4 Q4 0 10µ V=25 Irms=0 Rser=0 Lser=0 mfg="Murata" pn="GRM21BR61E106KA73" type="X5R"
-V2 N006 0 8.4 Rser=0.150
-M1 N007 N008 N009 N009 AO6407
-D1 N014 Q4 1N4148
-D2 N014 Q4 1N4148
-D3 N014 Q4 1N4148
-D4 N014 Q4 1N4148
-D5 Q4 N008 1N4148
-D6 0 N008 1N4148
-D7 0 N008 1N4148
-D8 0 N008 1N4148
-D9 0 N008 1N4148
-D10 0 N008 1N4148
-D11 0 N008 1N4148
-D12 0 N008 1N4148
-M2 N007 N014 N015 N015 AO6408
-R3 N015 0 10K tol=1 pwr=0.25
-R4 0 N008 100K tol=1 pwr=0.25
-R5 N014 Q4 4.7K tol=1 pwr=0.25
-R1 Q4 N009 1K tol=1 pwr=0.25
-R2 N009 0 4.7K tol=1 pwr=0.25
-XU3 N002 Q4 N011 N013 sq0 sq1 sq2 sq3 sq4 NC_13 NC_14 NC_15 Q4 0 74HC164 vcc=5 speed=1 tripdt=5n vcc1={vcc} speed1={speed} tripdt1={tripdt}
-V3 N002 0 PULSE(0 5 0 1n 1n 0.1 0.2)
-R6 N011 Q4 4.7K
-D13 sq1 RESET 1N4148
-D14 sq2 RESET 1N4148
-D15 sq3 RESET 1N4148
-D16 sq4 RESET 1N4148
-XU4 RESET N003 N005 LOAD N001 N004 Q4 0 74HC393 vcc=5 speed=1 tripdt=5n vcc1={vcc} speed1={speed} tripdt1a={tripdt}
-R11 N003 N002 4.7K
-C6 Q4 0 0.1µ V=25 Irms=0 Rser=0.025 Lser=800p mfg="Würth Elektronik" pn="885012206071 WCAP-CSGP 0603" type="X7R"
-C7 Q4 0 10µ V=25 Irms=0 Rser=0 Lser=0 mfg="Murata" pn="GRM21BR61E106KA73" type="X5R"
-R13 RESET 0 10K
-D19 LOAD N012 1N4148
-C5 RESET 0 0.1µ V=25 Irms=0 Rser=0.025 Lser=800p mfg="Würth Elektronik" pn="885012206071 WCAP-CSGP 0603" type="X7R"
-R7 N013 N012 4.7K
-D17 sq4 N012 1N4148
+XU1 HOUR_CLOCK N003 Q1 Q2 Q3 Q4 Q5 Q6 Q7 Q8 Q9 Q10 Q11 Q12 VCC 0 CD4040B vdd=5 speed=1 tripdt=5n vdd1={vdd} speed1={speed} tripdt1={tripdt}
+XU2 0 VCC N001 LT1086-5
+C1 N001 0 0.1µ V=25 Irms=0 Rser=0.025 Lser=800p mfg="Würth Elektronik" pn="885012206071 WCAP-CSGP 0603" type="X7R"
+C3 N001 0 10µ V=25 Irms=0 Rser=0 Lser=0 mfg="Murata" pn="GRM21BR61E106KA73" type="X5R"
+C2 VCC 0 0.1µ V=25 Irms=0 Rser=0.025 Lser=800p mfg="Würth Elektronik" pn="885012206071 WCAP-CSGP 0603" type="X7R"
+C4 VCC 0 10µ V=25 Irms=0 Rser=0 Lser=0 mfg="Murata" pn="GRM21BR61E106KA73" type="X5R"
+V2 N001 0 8.4 Rser=0.150
+D5 Q2 N002 1N4148
+D6 Q5 N002 1N4148
+D7 0 N002 1N4148
+D8 0 N002 1N4148
+D9 0 N002 1N4148
+D10 0 N002 1N4148
+D11 0 N002 1N4148
+D12 0 N002 1N4148
+XU7 DIS_SYS THRES_SYS P001 VCC SYSTEM_CLOCK THRES_SYS 0 VCC DIS THRES P002 MOTOR_RESET MOTOR_CLOCK THRES NE556_TRANSISTOR
+C9 0 P002 0.1µ V=25 Irms=0 Rser=0.035 Lser=766p mfg="Würth Elektronik" pn="885012205085 WCAP-CSGP 0402" type="X7R"
+R19 VCC DIS_SYS 8K tol=1 pwr=0.25
+R20 DIS_SYS THRES_SYS 68K tol=1 pwr=0.1
+C12 0 P001 0.1µ V=25 Irms=0 Rser=0.035 Lser=766p mfg="Würth Elektronik" pn="885012205085 WCAP-CSGP 0402" type="X7R"
+XU8 N017 N018 C0 C1 C2 C3 VCC 0 74HC393 vcc=5 speed=1 tripdt=5n vcc1={vcc} speed1={speed} tripdt1a={tripdt}
+C13 VCC 0 0.1µ V=25 Irms=0 Rser=0.025 Lser=800p mfg="Würth Elektronik" pn="885012206071 WCAP-CSGP 0603" type="X7R"
+C14 VCC 0 10µ V=25 Irms=0 Rser=0 Lser=0 mfg="Murata" pn="GRM21BR61E106KA73" type="X5R"
+R1 N017 0 10K
+R2 VCC R 4.7K
+R3 HOUR_CLOCK 0 100K tol=1 pwr=0.1
+R4 N003 SYSTEM_CLOCK 4.7K
+C15 N017 VCC 0.1µ V=25 Irms=0 Rser=0.025 Lser=800p mfg="Würth Elektronik" pn="885012206071 WCAP-CSGP 0603" type="X7R"
+C5 THRES_SYS 0 10µ V=25 Irms=0 Rser=0.0026 Lser=894p mfg="Würth Elektronik" pn="885012209028 WCAP-CSGP 1210" type="X7R"
+XU3 N004 P003 N007 N009 N012 N014 N015 N005 NC_01 NC_02 NC_03 NC_04 VCC 0 74HC164 vcc=5 speed=1 tripdt=5n vcc1={vcc} speed1={speed} tripdt1={tripdt}
+R5 N007 VCC 4.7K
+XU4 N006 N010 N013 LOAD N008 N011 VCC 0 74HC393 vcc=5 speed=1 tripdt=5n vcc1={vcc} speed1={speed} tripdt1a={tripdt}
+C6 VCC 0 0.1µ V=25 Irms=0 Rser=0.025 Lser=800p mfg="Würth Elektronik" pn="885012206071 WCAP-CSGP 0603" type="X7R"
+C7 VCC 0 10µ V=25 Irms=0 Rser=0 Lser=0 mfg="Murata" pn="GRM21BR61E106KA73" type="X5R"
+R6 N006 0 10K
+C8 N006 VCC 0.1µ V=25 Irms=0 Rser=0.025 Lser=800p mfg="Würth Elektronik" pn="885012206071 WCAP-CSGP 0603" type="X7R"
+R7 N009 LOAD 4.7K
+R8 N004 MOTOR_CLOCK 4.7K
+R9 N010 MOTOR_CLOCK 4.7K
+R10 P003 VCC 4.7K
+XU5 sq0 sq1 sq2 sq3 NC_05 NC_06 NC_07 N023 NC_08 NC_09 NC_10 NC_11 N019 N021 N022 N024 ULN2003
+M§F_NMOS1 N023 N025 0 0 AO6408
+R§MOTOR1 VCC N019 50 tol=1 pwr=10
+R§MOTOR2 VCC N021 50 tol=1 pwr=10
+R§MOTOR3 VCC N022 50 tol=1 pwr=10
+R§MOTOR4 VCC N024 50 tol=1 pwr=10
+XU6 sq0 sq1 sq2 sq3 NC_12 NC_13 NC_14 N020 NC_15 NC_16 NC_17 NC_18 N024 N022 N021 N019 ULN2003
+M§R_NMOS1 N020 R 0 0 AO6408
+R11 N012 sq0 4.7K tol=1 pwr=0.25
+R12 N014 sq1 4.7K tol=1 pwr=0.25
+R13 N015 sq2 4.7K tol=1 pwr=0.25
+R14 N005 sq3 4.7K tol=1 pwr=0.25
+S§R_PHOTO1 0 R N016 NC_19 switch
+V§R_EMITTER1 0 N016 PWL(6 0 6.1 5 6.5 5 6.6 0)
+S§F_PHOTO1 0 NC_20 N026 NC_21 switch
+V§F_EMITTER1 0 N026 PWL(6 0 6.1 5 6.5 5 6.6 0)
+R15 VCC DIS 8K
+R16 DIS THRES 68K tol=1 pwr=0.1
+R17 N025 VCC 4.7K tol=1 pwr=0.25
+D16 N025 MOTOR_RESET 1N4148
+D17 R MOTOR_RESET 1N4148
+R18 0 MOTOR_RESET 10K tol=1 pwr=0.25
+M§F_NMOS2 N025 R 0 0 AO6408
+C11 N027 0 100µ V=25 Irms=300m Rser=0.284 Lser=21.232n mfg="Würth Elektronik" pn="865080449011 WCAP-ASLI 8x6,5" type="Al electrolytic"
+R21 R N027 4.7K tol=1 pwr=0.25
+S1 N027 VCC N028 0 switch
+V§EnableDelay1 N028 0 PWL(5 0)
+R22 0 R 10K tol=1 pwr=0.25
+R23 R 0 10K
+C10 THRES 0 100µ V=25 Irms=0 Rser=0.0039 Lser=550p
+D13 R C0 1N4148
+D14 R C1 1N4148
+D15 R C2 1N4148
+D18 R C3 1N4148
+R26 P004 N002 4.7K
+XU9 Q1 Q3 Q4 Q6 HOUR_CLOCK VCC 0 74HC21 vcc=5 speed=1 tripdt=5n vcc1={vcc} speed1={speed} tripdt1={tripdt}
+C16 VCC 0 0.1µ V=25 Irms=0 Rser=0.025 Lser=800p mfg="Würth Elektronik" pn="885012206071 WCAP-CSGP 0603" type="X7R"
+C17 VCC 0 10µ V=25 Irms=0 Rser=0 Lser=0 mfg="Murata" pn="GRM21BR61E106KA73" type="X5R"
+M1 HOUR_CLOCK P004 0 0 AO6408
 .model D D
 .lib C:\Users\Parmeet Singh Ghai\AppData\Local\LTspice\lib\cmp\standard.dio
 .model NMOS NMOS
 .model PMOS PMOS
 .lib C:\Users\Parmeet Singh Ghai\AppData\Local\LTspice\lib\cmp\standard.mos
-.tran 0 5 0 1 uic
+.tran 0 1000 0 10 uic
 .options reltol=0.01 abstol=1n chgtol=1p
 .options gmin=1n cshunt=1p
 .options itl1=500 itl2=5000 itl4=100
 .include cd4000.lib
 .include 74hc.lib
+.model switch SW(ron=0.01 roff=1MEG vt=4.9 vh=0)
+* 74HC393\nCLK = LOW to HIGH\nCLEAR = HIGH
+* Test Pulse at 3600 (111000010000) Little Endian\n1s: 5 10 11 12  \n0s: 1 2 3 4 6 7 8 9
+* 74HC164\nCLK = LOW to HIGH\nCLE = ACTIVE LOW
+* 74HC393\nCLK = LOW to HIGH\nCLEAR = HIGH
 .lib 74hc.lib
+.lib C:\Users\Parmeet Singh Ghai\Documents\GitHub\AutomatedLockSystem\LTSpice\ULN2003.lib
 .lib CD4000.lib
 .lib LT1083.lib
+.lib NE556_TRANSISTOR.lib
 .backanno
 .end
