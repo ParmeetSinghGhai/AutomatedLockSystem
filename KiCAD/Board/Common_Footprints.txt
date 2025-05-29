@@ -1,0 +1,12 @@
+Resistor_THT:R_Axial_DIN0309_L9.0mm_D3.2mm_P12.70mm_Horizontal
+Package_TO_SOT_THT:TO-220-3_Vertical
+Connector_Molex:Molex_KK-254_AE-6410-02A_1x02_P2.54mm_Vertical
+LED_THT:LED_D3.0mm
+Diode_THT:D_DO-35_SOD27_P12.70mm_Horizontal
+Capacitor_THT:CP_Radial_D10.0mm_P5.00mm
+Capacitor_THT:C_Radial_D6.3mm_H5.0mm_P2.50mm
+C_Disc_D5.0mm_W2.5mm_P2.50mm
+Potentiometer_ACP_CA9-H3,8_Horizontal
+
+Connector_PinSocket_2.54mm:PinSocket_1x02_P2.54mm_Vertical
+Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P15.24mm_Horizontal
