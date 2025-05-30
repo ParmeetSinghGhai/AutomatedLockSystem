@@ -1,0 +1,37 @@
+Version 4
+SymbolType BLOCK
+RECTANGLE Normal -64 -88 80 88
+WINDOW 0 8 -88 Bottom 2
+SYMATTR Prefix X
+SYMATTR Value CD4015B
+SYMATTR ModelFile C:\Users\Parmeet Singh Ghai\Documents\GitHub\AutomatedLockSystem\LTSpice\CD4015B.sub
+SYMATTR SpiceLine vdd1={vdd} speed1={speed} tripdt1={tripdt}
+WINDOW 3 8 88 Top 2
+WINDOW 39 8 112 Top 2
+PIN -64 -48 LEFT 8
+PINATTR PinName D
+PINATTR SpiceOrder 1
+PIN -64 -16 LEFT 8
+PINATTR PinName CLK
+PINATTR SpiceOrder 2
+PIN -64 16 LEFT 8
+PINATTR PinName RST
+PINATTR SpiceOrder 3
+PIN -64 48 LEFT 8
+PINATTR PinName Q1
+PINATTR SpiceOrder 4
+PIN 80 -64 RIGHT 8
+PINATTR PinName Q2
+PINATTR SpiceOrder 5
+PIN 80 -32 RIGHT 8
+PINATTR PinName Q3
+PINATTR SpiceOrder 6
+PIN 80 0 RIGHT 8
+PINATTR PinName Q4
+PINATTR SpiceOrder 7
+PIN 80 32 RIGHT 8
+PINATTR PinName VDD
+PINATTR SpiceOrder 8
+PIN 80 64 RIGHT 8
+PINATTR PinName VGND
+PINATTR SpiceOrder 9

@@ -1,0 +1,1 @@
+138.7 Ohms and 0.1uf Cap for 32768 hz frequency

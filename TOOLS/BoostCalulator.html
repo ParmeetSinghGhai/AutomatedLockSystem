@@ -1,0 +1,94 @@
+<html>
+<head>
+<style>
+h2
+{
+color:blue;
+}
+span
+{
+color:green;
+}
+</style>
+<script>
+function Calculate()
+{
+//************ Inputs****************
+var Vin_Min=document.getElementById("Vin_Min").value / 1.0;
+var Vout=document.getElementById("Vout").value / 1.0;
+var I_Load=document.getElementById("I_Load").value / 1.0;
+var Vf=document.getElementById("Vf").value/1.0;
+var Vsat=document.getElementById("Vsat").value/1.0;
+var Fmin=document.getElementById("Fmin").value/1.0;
+var TimingCap=document.getElementById("TimingCap").value/1.0;
+var Vripple=document.getElementById("Vripple").value/1.0;
+var FbGround = document.getElementById("FbGround").value/1.0;
+
+//************ Calculations ****************
+var t_on_by_t_off = (Vout + Vf - Vin_Min) / (Vin_Min - Vsat);
+var period = 1.0 / Fmin;
+var toff = period / (t_on_by_t_off + 1.0);
+var ton = period - toff;
+var Ct = 4 * (1.0/100000.0) * ton;
+var IpkSwitch = 2.0 * I_Load * (t_on_by_t_off + 1.0);
+var Rsc = 0.3 / IpkSwitch;
+var Lmin = ((Vin_Min - Vsat) / IpkSwitch) * ton;
+var Co = ((I_Load * ton) / Vripple) * 9;
+var FbRatio = 1.25 / Vout;
+var FbVcc =((1.0 - FbRatio) / FbRatio) * FbGround;
+//************ Outputs ****************
+var output = document.getElementsByTagName("span");
+output[0].innerHTML = t_on_by_t_off + " %";
+output[1].innerHTML = period + " s";
+output[2].innerHTML = toff + " s";
+output[3].innerHTML = ton + " s";
+output[4].innerHTML = (Ct * 1000000000000)+ " pF";
+output[5].innerHTML = IpkSwitch + " A";
+output[6].innerHTML = Rsc + " Ohms";
+output[7].innerHTML = (Lmin * 1000000)+ " uH";
+output[8].innerHTML = (Co * 1000000) + " uF";
+output[9].innerHTML = FbRatio + " %";
+output[10].innerHTML = FbVcc + " Ohms";
+}
+</script>
+</head>
+
+
+
+<body>
+<!--INPUT-->
+<input id="Vin_Min" type="number">Vin_Min (V)</input>
+<br/>
+<input id="Vout" type="number">Vout (V)</input>
+<br/>
+<input id="I_Load" type="number">I_Load (A)</input>
+<br/>
+<input id="Vf" type="number">Vf(Diode Forward Voltage Drop) (V)</input>
+<br/>
+<input id="Vsat" type="number">Vsat(Drain to Source Voltage Drop) (V)</input>
+<br/>
+<input id="Fmin" type="number">Minimum Frequency (100KHz Max)</input>
+<br/>
+<input id="TimingCap" type="number">Timing Cap</input>
+<br/>
+<input id="Vripple" type="number">Vripple (mV Larger Ripple = Small Output Cap)</input>
+<br/>
+<input id="FbGround" type="number">Feedback Ground Resistance</input>
+<br/>
+<button onclick="Calculate()">Calculate</button>
+
+<!--OUTPUT-->
+<br/>
+<h2>t_on_by_t_off=<span></span></h2>
+<h2>period=<span></span></h2>
+<h2>toff=<span></span></h2>
+<h2>ton=<span></span></h2>
+<h2>Ct=<span></span></h2>
+<h2>Ipk Switch/Inductor Current=<span></span></h2>
+<h2>Rsc=<span></span></h2>
+<h2>Lmin=<span></span></h2>
+<h2>Co=<span></span></h2>
+<h2>Feedback Ratio=<span></span></h2>
+<h2>Feedback VCC Resistance=<span></span></h2>
+</body>
+</html>

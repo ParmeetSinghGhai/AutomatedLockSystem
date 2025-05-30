@@ -1,0 +1,32 @@
+* Dual 4-Stage Static Shift register
+.SUBCKT CD4015B  D CLK RST Q1 Q2 Q3 Q4 VDD VGND  vdd1={vdd} speed1={speed}  tripdt1={tripdt}
+*
+.param td1=35n*5/vdd1
+.param td2=80n*5/vdd1
+.param td3=100n*5/vdd1
+.param td4=1n*5/vdd1
+*
+XIND    D   Db   VDD VGND  CD40_IN_1  vdd2={vdd1}  speed2={speed1}  tripdt2={tripdt1}
+XINCLK  CLK Clkb VDD VGND  CD40_IN_1  vdd2={vdd1}  speed2={speed1}  tripdt2={tripdt1}
+XINRST  RST Rb VDD VGND  CD40_IN_1  vdd2={vdd1}  speed2={speed1}  tripdt2={tripdt1}
+*
+A7 db 0 0 0 0 dbn 0 0 BUF tripdt={tripdt1} td={td1}
+A8 clkb 0 0 0 0 0 clkn 0 BUF tripdt={tripdt1} td={td2}
+A9 rb 0 0 0 0 rn 0 0 BUF tripdt={tripdt1} td={td3}
+*
+A5 dbn 0 0 0 0 dbi 0 0 BUF tripdt={tripdt1} td={td4}
+A1 dbi 0 clkn 0 ri qi1 qn1 0 DFLOP tripdt={tripdt1} td={td4}
+A2 d2 0 clkn 0 ri qi2 qn2 0 DFLOP tripdt={tripdt1} td={td4}
+A3 d3 0 clkn 0 ri qi3 qn3 0 DFLOP tripdt={tripdt1} td={td4}
+A4 d4 0 clkn 0 ri 0 qn4 0 DFLOP tripdt={tripdt1} td={td4}
+A6 rn 0 0 0 0 ri 0 0 BUF tripdt={tripdt1} td={td4}
+A10 qi1 0 0 0 0 d2 0 0 BUF tripdt={tripdt1} td={td4}
+A11 qi2 0 0 0 0 d3 0 0 BUF tripdt={tripdt1} td={td4}
+A12 qi3 0 0 0 0 d4 0 0 BUF tripdt={tripdt1} td={td4}
+*
+XOUT1  qn1 Q1 VDD VGND  CD40_OUT_1X  vdd2={vdd1} speed2={speed1}  tripdt2={tripdt1}
+XOUT2  qn2 Q2 VDD VGND  CD40_OUT_1X  vdd2={vdd1} speed2={speed1}  tripdt2={tripdt1}
+XOUT3  qn3 Q3 VDD VGND  CD40_OUT_1X  vdd2={vdd1} speed2={speed1}  tripdt2={tripdt1}
+XOUT4  qn4 Q4 VDD VGND  CD40_OUT_1X  vdd2={vdd1} speed2={speed1}  tripdt2={tripdt1}
+*
+.ends CD4015B

@@ -1,0 +1,87 @@
+<html>
+<head>
+<style>
+h2
+{
+color:blue;
+}
+span
+{
+color:green;
+}
+</style>
+<script>
+/*
+
+*/
+function TimeSplit(n)
+{
+return n + "s" + "<br/>"+(n * 1000) + "ms " + "<br/>"+(n * 1000000) + "us";
+}
+
+function Calculate()
+{
+//************ Inputs****************
+var Frequency=document.getElementById("Frequency").value / 1.0;
+var DutyCycle=document.getElementById("DutyCycle").value / 1.0;
+var Capacitor=document.getElementById("Capacitor").value / 1.0;
+var Diode=document.getElementById("Diode").value / 1.0;
+var VCC=document.getElementById("VCC").value / 1.0;
+var UserRA=document.getElementById("RA").value / 1.0;
+var UserRB=document.getElementById("RB").value / 1.0;
+
+//************ Calculations ****************
+var Period = (1.0 / Frequency) / 1.0;
+var OnTime = ((DutyCycle/100.0) * Period) / 1.0;
+var OffTime = (Period - OnTime) / 1.0;
+var RB = (OffTime / (0.693 * Capacitor)) / 1.0;
+var RA = 0.0;
+if(Diode > 0.0 && VCC > 0.0)
+{
+RA = (OnTime / ((Math.log(((2.0 * VCC) - (3.0 * Diode)) / (VCC - (3.0 * Diode)))) * Capacitor)) / 1.0;
+}
+else
+{
+RA = ((OnTime / (0.693 * Capacitor)) - RB) / 1.0;
+}
+
+//************ Outputs ****************
+var output = document.getElementsByTagName("span");
+output[0].innerHTML = RA + " Ohms";
+output[1].innerHTML = RB + " Ohms";
+output[2].innerHTML = TimeSplit(Period);
+output[3].innerHTML = TimeSplit(OnTime);
+output[4].innerHTML = TimeSplit(OffTime);
+}
+</script>
+</head>
+
+
+
+<body>
+<!--INPUT-->
+<input id="DutyCycle" type="number">DutyCycle</input>
+<br/>
+<input id="Frequency" type="number">Frequency</input>
+<br/>
+<input id="Capacitor" type="number">Capacitor</input>
+<br/>
+<input id="Diode" type="number" value=0.0>Diode Voltage Drop</input>
+<br/>
+<input id="VCC" type="number" value=0.0>VCC</input>
+<br/>
+<input id="RA" type="number">VCC Resistance</input>
+<br/>
+<input id="RB" type="number">Ground Resistance</input>
+<br/>
+<button onclick="Calculate()">Calculate</button>
+
+<!--OUTPUT-->
+<br/>
+<h2>VCC Resistor=<span></span></h2>
+<h2>Ground Resistor=<span></span></h2>
+<h2>Period=<span></span></h2>
+<h2>OnTime=<span></span></h2>
+<h2>OffTime=<span></span></h2>
+</body>
+</html>

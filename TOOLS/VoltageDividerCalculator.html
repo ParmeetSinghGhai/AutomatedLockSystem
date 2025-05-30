@@ -1,0 +1,52 @@
+<html>
+<head>
+<script type="text/javascript">
+
+
+
+function calc()
+{
+var vin = document.getElementById("vin").value * 1.0;
+var vout = document.getElementById("vout").value * 1.0;
+var vccr = document.getElementById("vccr").value * 1.0;
+var gr = document.getElementById("gr").value * 1.0;
+var result = document.getElementById("result");
+
+var vratio = vout/vin;
+var gratio = (1.0 - vratio) / vratio;
+
+var groundResistance = vccr / gratio;
+var vccResistance = gr * gratio;
+var v_output = vin * ( gr / (gr + vccr));
+var max_current = vin / (gr + vccr);
+
+result.innerHTML="Ratio = "+gratio+
+"<br/>Ground Resistance = "+ groundResistance +
+"<br/>Vcc Resistance = "+vccResistance+
+"<br/>Vout = "+v_output+
+"<br/>Max Current = "+max_current;
+
+}
+
+
+</script>
+</head>
+
+
+<body>
+<input type="number" id="vin">Vin</input>
+<br/>
+<input type="number" id="vout">Vout</input>
+<br/>
+<input type="number" id="vccr">VCC Resistor</input>
+<br/>
+<input type="number" id="gr">Ground Resistor</input>
+<br/>
+<button onclick="calc()">Calculate</button>
+<br/>
+<br/>
+<label id="result"></label>
+<br/>
+</body>
+
+</html>

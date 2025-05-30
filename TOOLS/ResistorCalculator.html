@@ -1,0 +1,89 @@
+<html>
+<head>
+<style>
+h2
+{
+color:blue;
+}
+span
+{
+color:green;
+}
+</style>
+<script>
+/*
+
+*/
+function TimeSplit(n)
+{
+return n + "ohms" + "<br/>"+(n / 1000) + " Kilo Ohms " + "<br/>"+(n / 1000000) + " Mega Ohms";
+}
+
+function Calculate()
+{
+
+//************ Inputs****************
+var band1=document.getElementById("Band1").selectedIndex;
+var band2=document.getElementById("Band2").selectedIndex;
+var band3=document.getElementById("Band3").selectedIndex;
+var resistor = (band2 + (band1 * 10))  * Math.pow(10, band3);
+
+//************ Outputs ****************
+var output = document.getElementsByTagName("span");
+output[0].innerHTML = TimeSplit(resistor);
+}
+</script>
+</head>
+
+
+
+<body>
+<!--INPUT-->
+<select id="Band1">Band1
+<option>Black</option>
+<option>Brown</option>
+<option>Red</option>
+<option>Orange</option>
+<option>Yellow</option>
+<option>Green</option>
+<option>Blue</option>
+<option>Violet</option>
+<option>Gold</option>
+<option>White</option>
+</select>
+<br/>
+
+<select id="Band2">Band2
+<option>Black</option>
+<option>Brown</option>
+<option>Red</option>
+<option>Orange</option>
+<option>Yellow</option>
+<option>Green</option>
+<option>Blue</option>
+<option>Violet</option>
+<option>Gold</option>
+<option>White</option>
+</select>
+<br/>
+
+<select id="Band3">Band3
+<option>Black</option>
+<option>Brown</option>
+<option>Red</option>
+<option>Orange</option>
+<option>Yellow</option>
+<option>Green</option>
+<option>Blue</option>
+<option>Violet</option>
+<option>Gold</option>
+<option>White</option>
+</select>
+<br/>
+<button onclick="Calculate()">Calculate</button>
+
+<!--OUTPUT-->
+<br/>
+<h2>Resistor =<span></span></h2>
+</body>
+</html>
