@@ -1,0 +1,124 @@
+* C:\Users\Parmeet Singh Ghai\Documents\GitHub\AutomatedLockSystem\LTSpice\Draft4_CD4060_LM393.asc
+XU1 HourClock N004 Q1 Q2 Q3 Q4 Q5 Q6 Q7 Q8 Q9 Q10 Q11 Q12 VCC 0 CD4040B vdd=5 speed=1 tripdt=5n vdd1={vdd} speed1={speed} tripdt1={tripdt}
+XU2 0 VCC N001 LT1086-5
+C1 N001 0 0.1µ V=25 Irms=0 Rser=0.025 Lser=800p mfg="Würth Elektronik" pn="885012206071 WCAP-CSGP 0603" type="X7R"
+C3 N001 0 10µ V=25 Irms=0 Rser=0 Lser=0 mfg="Murata" pn="GRM21BR61E106KA73" type="X5R"
+C2 VCC 0 0.1µ V=25 Irms=0 Rser=0.025 Lser=800p mfg="Würth Elektronik" pn="885012206071 WCAP-CSGP 0603" type="X7R"
+C4 VCC 0 10µ V=25 Irms=0 Rser=0 Lser=0 mfg="Murata" pn="GRM21BR61E106KA73" type="X5R"
+V2 N001 0 8.4 Rser=0.150
+D5 Q4 N002 1N4148
+D6 Q5 N002 1N4148
+D7 Q7 N002 1N4148
+D8 Q8 N002 1N4148
+D9 Q9 N002 1N4148
+D10 Q10 N002 1N4148
+D11 Q11 N002 1N4148
+D12 Q12 N002 1N4148
+R4 N004 N003 4.7K
+XU5 M4 M3 M2 M1 NC_01 NC_02 NC_03 0 NC_04 NC_05 NC_06 NC_07 N012 N014 N015 N018 ULN2003
+S§F_PHOTO_TRANSISTOR 0 F_PHOTO_COLLECTOR N029 0 switch
+V§R_EMITTER1 N027 0 PULSE(0 5 5 1n 1n 5 10)
+S§R_PHOTO_TRANSISTOR 0 R_PHOTO_COLLECTOR N030 0 switch
+V§F_EMITTER1 N025 0 PULSE(0 5 0 1n 1n 5 10)
+V3 N003 0 PULSE(0 5 0 1n 1n 0.5 1)
+R3 REF2.5 VCC 4.7K
+D3 N024 Q1 1N4148
+D4 N024 Q2 1N4148
+D13 N024 Q3 1N4148
+D14 N024 Q6 1N4148
+R2 N024 VCC 4.7K
+R15 HourClock VCC 4.7K
+XU7 N016 HourClock C0 C1 C2 C3 C4 NC_08 NC_09 NC_10 NC_11 NC_12 NC_13 NC_14 VCC 0 CD4040B vdd=5 speed=1 tripdt=5n vdd1={vdd} speed1={speed} tripdt1={tripdt}
+C5 VCC 0 0.1µ V=25 Irms=0 Rser=0.025 Lser=800p mfg="Würth Elektronik" pn="885012206071 WCAP-CSGP 0603" type="X7R"
+C9 VCC 0 10µ V=25 Irms=0 Rser=0 Lser=0 mfg="Murata" pn="GRM21BR61E106KA73" type="X5R"
+C10 VCC 0 0.1µ V=25 Irms=0 Rser=0.025 Lser=800p mfg="Würth Elektronik" pn="885012206071 WCAP-CSGP 0603" type="X7R"
+C12 VCC 0 10µ V=25 Irms=0 Rser=0 Lser=0 mfg="Murata" pn="GRM21BR61E106KA73" type="X5R"
+R6 N016 C3 4.7K
+R19 P001 VCC 4.7K
+D§SECOND_SIGNAL P001 Q1 AOT-2015
+XU3 N005 N010 F_RESET P002 N007 N009 N011 VCC 0 CD4015B vdd=5 speed=1 tripdt=5n vdd1={vdd} speed1={speed} tripdt1={tripdt}
+C6 VCC 0 0.1µ V=25 Irms=0 Rser=0.025 Lser=800p mfg="Würth Elektronik" pn="885012206071 WCAP-CSGP 0603" type="X7R"
+C7 VCC 0 10µ V=25 Irms=0 Rser=0 Lser=0 mfg="Murata" pn="GRM21BR61E106KA73" type="X5R"
+R5 N010 MOTOR_CLOCK 4.7K
+M2 N005 P003 0 0 AO6408
+R7 P003 N006 4.7K
+R8 N005 VCC 4.7K
+XU4 N005 N021 R_RESET N023 N017 N020 N022 VCC 0 CD4015B vdd=5 speed=1 tripdt=5n vdd1={vdd} speed1={speed} tripdt1={tripdt}
+C8 VCC 0 0.1µ V=25 Irms=0 Rser=0.025 Lser=800p mfg="Würth Elektronik" pn="885012206071 WCAP-CSGP 0603" type="X7R"
+C13 VCC 0 10µ V=25 Irms=0 Rser=0 Lser=0 mfg="Murata" pn="GRM21BR61E106KA73" type="X5R"
+R9 N021 MOTOR_CLOCK 4.7K
+D20 P002 M4 1N4148
+D21 N007 M3 1N4148
+D22 N009 M2 1N4148
+D23 N011 M1 1N4148
+D24 N017 M2 1N4148
+D25 N020 M3 1N4148
+D26 N022 M4 1N4148
+D27 N023 M1 1N4148
+V1 MOTOR_CLOCK 0 PULSE(0 5 0 1n 1n 0.1 0.2)
+R§MOTOR1 VCC N018 100
+R§MOTOR2 VCC N015 100
+R§MOTOR3 VCC N014 100
+R§MOTOR4 VCC N012 100
+D2 N007 N006 1N4148
+D16 N017 N006 1N4148
+R10 N006 0 47K
+V§"R"_TestCondition N028 0 PULSE(0 5 0 1n 1n 10 20)
+A1 N028 0 0 0 0 R 0 0 BUF Vhigh=5
+A2 N025 0 0 0 0 F_PHOTO 0 0 BUF Vhigh=5
+A3 N027 0 0 0 0 R_PHOTO 0 0 BUF Vhigh=5
+XU6 REF2.5 P004 VCC 0 HourClock LM393A
+R18 REF2.5 0 4.7K
+XU8 N024 REF2.5 VCC 0 HourClock LM393A
+D35 P005 0 NSPW500BS
+D36 P006 0 NSPW500BS
+D37 P007 0 NSPW500BS
+D38 P008 0 NSPW500BS
+D39 P009 0 NSPW500BS
+R16 C0 P005 4.7K
+R29 C1 P006 4.7K
+R30 C2 P007 4.7K
+R31 C3 P008 4.7K
+R32 C4 P009 4.7K
+XU9 N019 R_PHOTO_COLLECTOR VCC 0 R_RESET LM393A
+R11 VCC N019 4.7K
+R12 N019 0 4.7K
+R13 R_RESET VCC 4.7K
+R14 C2 R_PHOTO_COLLECTOR 4.7K
+R17 F_RESET VCC 4.7K
+XU10 N008 F_PHOTO_COLLECTOR VCC 0 F_RESET LM393A
+R20 VCC F_PHOTO_COLLECTOR 4.7K
+R21 F_PHOTO_COLLECTOR 0 4.7K
+R22 C2 N008 4.7K
+V4 N026 0 PWL(0 5 0.2 5 0.3 0)
+M1 F_PHOTO_COLLECTOR N013 0 0 AO6408
+C§DELAY_CAPACITOR2 N013 0 680µ V=25 Irms=792m Rser=0.093 Lser=4n mfg="Würth Elektronik" pn="860010475015 WCAP-ATG8 10x16" type="Al electrolytic"
+R§DELAY_RESISTOR 0 N013 100K
+S1 N013 VCC DELAY_PULSE 0 switch
+R23 P004 N002 4.7K
+V5 N029 0 PWL(80 0 80.1 5 140 5 140.1 0)
+V6 N030 0 PWL(240 0 240.1 5 260 5 260.1 0)
+.model D D
+.lib C:\Users\Parmeet Singh Ghai\AppData\Local\LTspice\lib\cmp\standard.dio
+.model NMOS NMOS
+.model PMOS PMOS
+.lib C:\Users\Parmeet Singh Ghai\AppData\Local\LTspice\lib\cmp\standard.mos
+.tran 0 1000 0 10 uic
+.options reltol=0.01 abstol=1n chgtol=1p
+.options gmin=1n cshunt=1p
+.options itl1=500 itl2=5000 itl4=100
+.include cd4000.lib
+.include 74hc.lib
+.model switch SW(ron=0.01 roff=1MEG vt=4.9 vh=0)
+* R / Trigger BIT is the 5th Bit with Count of 32 \nRESET will happen at 6th BIT so the TRIGGER will \nremain ON for another 32 counts or 16 hours
+* RESET is always ONE BIT \nahead of the R/TRIGGER BIT
+* Test Condition:\n1) Charge Delay Cap. Test if Forward is delayed or not\n2) Stop Forward . Make Sure All Motor Outputs are Stopped\n3) When "R" is enabled then Turn Forward PhotoTransistor OFF\n4) Turn On Reverse Photo Transistor to make reverse is OFF while "R" is still on \n5) while "R" is still on. make sure both Forward and Reverse are TURNED OFF\n6) when "R" is off then Forward should turn back on
+* Clock Output will remain low \nmost of the time so no need for \na pull down
+* "R" signal at its lowest is 700mV and its highest is 5V\nfor Forward Rotation, when R is LOW(700mv) the NEG TERM \nof comparator is 2.5V which makes Forward Rotation turn on \nwhen PhotoTransistor turns on then NEG is at Ground(0v) and R\ncould be at LOW(700mV) or HIGH(5V) either ways the Forward Rotation\nremains OFF.
+.lib C:\Users\Parmeet Singh Ghai\Documents\GitHub\AutomatedLockSystem\LTSpice\CD4015B.sub
+.lib C:\Users\Parmeet Singh Ghai\Documents\GitHub\AutomatedLockSystem\LTSpice\LM393A.sub
+.lib C:\Users\Parmeet Singh Ghai\Documents\GitHub\AutomatedLockSystem\LTSpice\ULN2003.lib
+.lib CD4000.lib
+.lib LT1083.lib
+.backanno
+.end
