@@ -1,20 +1,20 @@
-Questionable use of curly braces in "xu1 hourclock n004 q1 q2 q3 q4 q5 q6 q7 q8 q9 q10 q11 q12 vcc 0 cd4040b vdd=5 speed=1 tripdt=5n vdd1={vdd} speed1={speed} tripdt1={tripdt}"
+Questionable use of curly braces in "xu1 hourclock nc_01 q1 q2 q3 q4 q5 q6 q7 q8 q9 q10 q11 q12 vcc 0 cd4040b vdd=5 speed=1 tripdt=5n vdd1={vdd} speed1={speed} tripdt1={tripdt}"
     Error: undefined symbol in: "[vdd]"
-Questionable use of curly braces in "xu1 hourclock n004 q1 q2 q3 q4 q5 q6 q7 q8 q9 q10 q11 q12 vcc 0 cd4040b vdd=5 speed=1 tripdt=5n vdd1=(vdd) speed1={speed} tripdt1={tripdt}"
+Questionable use of curly braces in "xu1 hourclock nc_01 q1 q2 q3 q4 q5 q6 q7 q8 q9 q10 q11 q12 vcc 0 cd4040b vdd=5 speed=1 tripdt=5n vdd1=(vdd) speed1={speed} tripdt1={tripdt}"
     Error: undefined symbol in: "[speed]"
-Questionable use of curly braces in "xu1 hourclock n004 q1 q2 q3 q4 q5 q6 q7 q8 q9 q10 q11 q12 vcc 0 cd4040b vdd=5 speed=1 tripdt=5n vdd1=(vdd) speed1=(speed) tripdt1={tripdt}"
+Questionable use of curly braces in "xu1 hourclock nc_01 q1 q2 q3 q4 q5 q6 q7 q8 q9 q10 q11 q12 vcc 0 cd4040b vdd=5 speed=1 tripdt=5n vdd1=(vdd) speed1=(speed) tripdt1={tripdt}"
     Error: undefined symbol in: "[tripdt]"
-Questionable use of curly braces in "xu7 n011 hourclock c0 c1 c2 c3 c4 nc_02 nc_03 nc_04 nc_05 nc_06 nc_07 nc_08 vcc 0 cd4040b vdd=5 speed=1 tripdt=5n vdd1={vdd} speed1={speed} tripdt1={tripdt}"
+Questionable use of curly braces in "xu7 n011 hourclock c0 c1 c2 c3 c4 nc_04 nc_05 nc_06 nc_07 nc_08 nc_09 nc_10 vcc 0 cd4040b vdd=5 speed=1 tripdt=5n vdd1={vdd} speed1={speed} tripdt1={tripdt}"
     Error: undefined symbol in: "[vdd]"
-Questionable use of curly braces in "xu7 n011 hourclock c0 c1 c2 c3 c4 nc_02 nc_03 nc_04 nc_05 nc_06 nc_07 nc_08 vcc 0 cd4040b vdd=5 speed=1 tripdt=5n vdd1=(vdd) speed1={speed} tripdt1={tripdt}"
+Questionable use of curly braces in "xu7 n011 hourclock c0 c1 c2 c3 c4 nc_04 nc_05 nc_06 nc_07 nc_08 nc_09 nc_10 vcc 0 cd4040b vdd=5 speed=1 tripdt=5n vdd1=(vdd) speed1={speed} tripdt1={tripdt}"
     Error: undefined symbol in: "[speed]"
-Questionable use of curly braces in "xu7 n011 hourclock c0 c1 c2 c3 c4 nc_02 nc_03 nc_04 nc_05 nc_06 nc_07 nc_08 vcc 0 cd4040b vdd=5 speed=1 tripdt=5n vdd1=(vdd) speed1=(speed) tripdt1={tripdt}"
+Questionable use of curly braces in "xu7 n011 hourclock c0 c1 c2 c3 c4 nc_04 nc_05 nc_06 nc_07 nc_08 nc_09 nc_10 vcc 0 cd4040b vdd=5 speed=1 tripdt=5n vdd1=(vdd) speed1=(speed) tripdt1={tripdt}"
     Error: undefined symbol in: "[tripdt]"
-Questionable use of curly braces in "xforward_ctrl load n008 f_reset p002 n006 n007 n009 vcc 0 cd4015b vdd=5 speed=1 tripdt=5n vdd1={vdd} speed1={speed} tripdt1={tripdt}"
+Questionable use of curly braces in "xforward_ctrl load n007 f_reset p002 n005 n006 n008 vcc 0 cd4015b vdd=5 speed=1 tripdt=5n vdd1={vdd} speed1={speed} tripdt1={tripdt}"
     Error: undefined symbol in: "[vdd]"
-Questionable use of curly braces in "xforward_ctrl load n008 f_reset p002 n006 n007 n009 vcc 0 cd4015b vdd=5 speed=1 tripdt=5n vdd1=(vdd) speed1={speed} tripdt1={tripdt}"
+Questionable use of curly braces in "xforward_ctrl load n007 f_reset p002 n005 n006 n008 vcc 0 cd4015b vdd=5 speed=1 tripdt=5n vdd1=(vdd) speed1={speed} tripdt1={tripdt}"
     Error: undefined symbol in: "[speed]"
-Questionable use of curly braces in "xforward_ctrl load n008 f_reset p002 n006 n007 n009 vcc 0 cd4015b vdd=5 speed=1 tripdt=5n vdd1=(vdd) speed1=(speed) tripdt1={tripdt}"
+Questionable use of curly braces in "xforward_ctrl load n007 f_reset p002 n005 n006 n008 vcc 0 cd4015b vdd=5 speed=1 tripdt=5n vdd1=(vdd) speed1=(speed) tripdt1={tripdt}"
     Error: undefined symbol in: "[tripdt]"
 Questionable use of curly braces in "xreverse_ctrl load n014 r_reset p003 n012 n013 n015 vcc 0 cd4015b vdd=5 speed=1 tripdt=5n vdd1={vdd} speed1={speed} tripdt1={tripdt}"
     Error: undefined symbol in: "[vdd]"
@@ -24,7 +24,7 @@ Questionable use of curly braces in "xreverse_ctrl load n014 r_reset p003 n012 n
     Error: undefined symbol in: "[tripdt]"
 LTspice 24.0.12 for Windows
 Circuit: * C:\Users\Parmeet Singh Ghai\Documents\GitHub\AutomatedLockSystem\LTSpice\Draft5_CompleteULN2003_use.asc
-Start Time: Sun Jun  1 11:15:49 2025
+Start Time: Tue Jun 10 13:19:35 2025
 Warning: Multiple definitions of model "dio2" Type: Diode
 Warning: Multiple definitions of model "sw_hc2" Type: Switch
 Warning: Multiple definitions of model "sw_hc1" Type: Switch
@@ -32,6 +32,10 @@ Warning: Multiple definitions of model "dio2" Type: Diode
 Warning: Multiple definitions of model "sw_hc2" Type: Switch
 Warning: Multiple definitions of model "sw_hc1" Type: Switch
 Warning: Multiple definitions of model "cd40dio1" Type: Diode
+Warning: Multiple definitions of model "2scr375p" Type: BJT
+Warning: Multiple definitions of model "bc857b" Type: BJT
+Warning: Multiple definitions of model "bc847c" Type: BJT
+Warning: Multiple definitions of model "bc847b" Type: BJT
 solver = Normal
 Maximum thread count: 12
 
@@ -49,17 +53,19 @@ c6: Increased Cpar to 1e-13
 c8: Increased Cpar to 1e-13
 c11: Increased Cpar to 1e-10
 WARNING: Less than two connections to node u1:mrn.  This node is used by a:u1:r.
+WARNING: Less than two connections to node nc_02.  This node is used by r4.
 WARNING: Less than two connections to node u7:mrn.  This node is used by a:u7:r.
-WARNING: Less than two connections to node nc_02.  This node is used by r:u7:out6:out.
-WARNING: Less than two connections to node nc_03.  This node is used by r:u7:out7:out.
-WARNING: Less than two connections to node nc_04.  This node is used by r:u7:out8:out.
-WARNING: Less than two connections to node nc_05.  This node is used by r:u7:out9:out.
-WARNING: Less than two connections to node nc_06.  This node is used by r:u7:out10:out.
-WARNING: Less than two connections to node nc_07.  This node is used by r:u7:out11:out.
-WARNING: Less than two connections to node nc_08.  This node is used by r:u7:out12:out.
+WARNING: Less than two connections to node nc_04.  This node is used by r:u7:out6:out.
+WARNING: Less than two connections to node nc_05.  This node is used by r:u7:out7:out.
+WARNING: Less than two connections to node nc_06.  This node is used by r:u7:out8:out.
+WARNING: Less than two connections to node nc_07.  This node is used by r:u7:out9:out.
+WARNING: Less than two connections to node nc_08.  This node is used by r:u7:out10:out.
+WARNING: Less than two connections to node nc_09.  This node is used by r:u7:out11:out.
+WARNING: Less than two connections to node nc_10.  This node is used by r:u7:out12:out.
 Per .tran options, skipping operating point for transient analysis.
 Ignoring empty pin current: Ix(u1:vdd)
 Ignoring empty pin current: Ix(u7:vdd)
 Ignoring empty pin current: Ix(forward_ctrl:vdd)
 Ignoring empty pin current: Ix(reverse_ctrl:vdd)
-.step index=0
+.step index=4
+Heightened Def Con from 23.0005 to 23.0005
